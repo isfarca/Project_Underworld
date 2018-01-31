@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2330082}
   - component: {fileID: 64751543685852922}
   m_Layer: 0
-  m_Name: Plane.000
+  m_Name: 1WayBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
