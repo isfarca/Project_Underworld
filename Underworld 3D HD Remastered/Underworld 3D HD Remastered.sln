@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Underworld 3D HD Remastered.Plugins", "Underworld 3D HD Remastered.Plugins.csproj", "{E8B0CD01-1101-2434-4448-26DFFB25EF15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Underworld 3D HD Remastered", "Underworld 3D HD Remastered.csproj", "{22D1150A-7573-AF31-2B29-540A041955B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{E8B0CD01-1101-2434-4448-26DFFB25EF15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8B0CD01-1101-2434-4448-26DFFB25EF15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8B0CD01-1101-2434-4448-26DFFB25EF15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D1150A-7573-AF31-2B29-540A041955B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D1150A-7573-AF31-2B29-540A041955B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D1150A-7573-AF31-2B29-540A041955B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D1150A-7573-AF31-2B29-540A041955B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
