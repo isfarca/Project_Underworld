@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Lava : MonoBehaviour
 {
@@ -28,15 +29,15 @@ public class Lava : MonoBehaviour
                 {
                     player.transform.position = new Vector3
                     (
-                        respawn.transform.position.x - 0.011f,
-                        respawn.transform.position.y + 1.16f,
+                        respawn.transform.position.x - Player.POS_X,
+                        respawn.transform.position.y + Player.POS_Y,
                         respawn.transform.position.z
                      );
                 }
             }
             else
             {
-                // Show LoseScreen
+                SceneManager.LoadScene(3); // Load lose screen
             }
         }
     }
