@@ -27,14 +27,9 @@ public class Screen : MonoBehaviour
 
     #region Other auxiliary functions
 
-    private void LoadLevel()
+    public void LoadLevel()
     {
         SceneManager.LoadScene(1); // Load level 1
-    }
-
-    public void LoadNextScene()
-    {
-        LoadLevel();
     }
 
     #endregion

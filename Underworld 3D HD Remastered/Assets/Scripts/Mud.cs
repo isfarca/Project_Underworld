@@ -4,37 +4,45 @@ public class Mud : MonoBehaviour
 {
     #region Declare variables
 
-    // Value types
-    private bool isMud = false;
-
     // Reference types
-    private GameObject player;
+    private CharacterMotorC characterMotorCScript;
 
     #endregion
 
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-    }
-
-    void Update()
-    {
-        if (player != null && isMud)
-        {
-            CharacterController controller = GetComponent<CharacterController>();
-            Vector3 horizontalVelocity = controller.velocity;
-
-            horizontalVelocity = new Vector3(controller.velocity.x, controller.velocity.y, 0);
-        }
-    }
+    #region System functions
 
     private void OnTriggerEnter(Collider other)
     {
-        isMud = true;
+        GetCharacterMotorCScript();
+
+        // Slow it down
+        characterMotorCScript.movement.maxForwardSpeed /= 2;
+        characterMotorCScript.movement.maxSidewaysSpeed /= 2;
+        characterMotorCScript.movement.maxBackwardsSpeed /= 2;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        isMud = false;
+        GetCharacterMotorCScript();
+
+        // Restore original speed
+        characterMotorCScript.movement.maxForwardSpeed *= 2;
+        characterMotorCScript.movement.maxSidewaysSpeed *= 2;
+        characterMotorCScript.movement.maxBackwardsSpeed *= 2;
     }
+
+    #endregion
+
+    #region Custom functions
+
+    #region Other auxiliary functions
+
+    void GetCharacterMotorCScript()
+    {
+        characterMotorCScript = FindObjectOfType<CharacterMotorC>();
+    }
+
+    #endregion
+
+    #endregion
 }

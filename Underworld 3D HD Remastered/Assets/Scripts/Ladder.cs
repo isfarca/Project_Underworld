@@ -6,10 +6,11 @@ public class Ladder : MonoBehaviour
 
     // Value types
     private bool canClimb = false;
-    private float speed = 100f;
+    private float speed = 13f;
 
     // Reference types
-    private GameObject player;
+    private GameObject playerAsset;
+    private CharacterMotorC characterMotorCScript;
 
     #endregion
 
@@ -20,7 +21,9 @@ public class Ladder : MonoBehaviour
     {
         // Algorithm
         GetPlayerGameObject();
-	}
+        GetCharacterMotorCScript();
+
+    }
 
     #endregion
 
@@ -39,11 +42,15 @@ public class Ladder : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        characterMotorCScript.movement.maxFallSpeed = 0f;
+
         canClimb = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
+        characterMotorCScript.movement.maxFallSpeed = 20f;
+
         canClimb = false;
     }
 
@@ -55,7 +62,12 @@ public class Ladder : MonoBehaviour
 
     void GetPlayerGameObject()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        playerAsset = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    void GetCharacterMotorCScript()
+    {
+        characterMotorCScript = FindObjectOfType<CharacterMotorC>();
     }
 
     #endregion
@@ -64,12 +76,16 @@ public class Ladder : MonoBehaviour
 
     void ClimbLadder()
     {
-        if (player != null)
+        if (playerAsset != null)
         {
             if (canClimb)
             {
                 if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-                    player.transform.Translate(Vector3.up * speed * Time.deltaTime);
+                    playerAsset.transform.Translate(Vector3.up * speed * Time.deltaTime);
+                else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+                    characterMotorCScript.movement.maxFallSpeed = 6f;
+                else
+                    characterMotorCScript.movement.maxFallSpeed = 0f;
             }
         }
     }

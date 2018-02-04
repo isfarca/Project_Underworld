@@ -3,37 +3,26 @@ using UnityEngine.SceneManagement;
 
 public class Lava : MonoBehaviour
 {
-    #region Declare variables
-
-    // Reference types
-    private GameObject respawn;
-
-    #endregion
-
     #region System functions
 
     private void OnTriggerEnter(Collider other)
     {
         // Declare variables
-        Player player = FindObjectOfType<Player>();
+        Player playerScript = FindObjectOfType<Player>();
+        Respawn respawnScript = FindObjectOfType<Respawn>();
+        LiveDisplay liveDisplayScript = FindObjectOfType<LiveDisplay>();
 
-        if (player != null)
+        if (playerScript != null)
         {
-            if (player.Live > 0)
+            if (playerScript.Live > 0)
             {
-                player.Live--;
+                playerScript.Live--;
 
-                respawn = GameObject.FindGameObjectWithTag("Respawn");
+                if (respawnScript != null)
+                    respawnScript.StartPosition();
 
-                if (respawn != null)
-                {
-                    player.transform.position = new Vector3
-                    (
-                        respawn.transform.position.x - Player.POS_X,
-                        respawn.transform.position.y + Player.POS_Y,
-                        respawn.transform.position.z
-                     );
-                }
+                if (liveDisplayScript != null)
+                    liveDisplayScript.SetHearts();
             }
             else
             {

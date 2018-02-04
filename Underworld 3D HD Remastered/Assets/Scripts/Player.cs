@@ -6,11 +6,13 @@ public class Player : MonoBehaviour
 
     // Value types
     private int lives = 3;
+    private float resetPoint = -30f;
     public const float POS_X = 0.011f;
     public const float POS_Y = 1.16f;
 
     // Reference types
-    private GameObject respawn;
+    private GameObject respawnAsset;
+    private Respawn respawnScript;
 
     #endregion
 
@@ -30,6 +32,8 @@ public class Player : MonoBehaviour
     {
         // Algorithm
         SetPlayerPositionX();
+
+        ResetPlayerPosition();
     }
 
     #endregion
@@ -40,7 +44,7 @@ public class Player : MonoBehaviour
 
     void GetRespawnGameObject()
     {
-        respawn = GameObject.FindGameObjectWithTag("Respawn");
+        respawnAsset = GameObject.FindGameObjectWithTag("Respawn");
     }
 
     #endregion
@@ -49,14 +53,24 @@ public class Player : MonoBehaviour
 
     void SetPlayerPositionX()
     {
-        if (transform.position.x != (respawn.transform.position.x - POS_X))
+        if (transform.position.x != (respawnAsset.transform.position.x - POS_X))
         {
             transform.position = new Vector3
             (
-                (respawn.transform.position.x - POS_X),
+                (respawnAsset.transform.position.x - POS_X),
                 transform.position.y,
                 transform.position.z
             );
+        }
+    }
+
+    void ResetPlayerPosition()
+    {
+        if (transform.position.y < resetPoint)
+        {
+            respawnScript = FindObjectOfType<Respawn>();
+
+            respawnScript.StartPosition();
         }
     }
 
