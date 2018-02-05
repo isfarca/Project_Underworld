@@ -5,7 +5,7 @@ public class LiveDisplay : MonoBehaviour
     #region Declare variables
 
     // Value types
-    private const float PlayerPositionDistanceFactorZ = 0.05f;
+    private const float PlayerPositionDistanceFactorZ = 0.1f;
 
     // Reference types
     private GameObject playerAsset;
@@ -78,10 +78,6 @@ public class LiveDisplay : MonoBehaviour
             {
                 case 2:
 
-                    Destroy(liveSprites[0]);
-                    Destroy(liveSprites[0]);
-                    Destroy(liveSprites[0]);
-
                     InstantiateInGameObject
                     (
                         Instantiate(liveSprites[0], new Vector3(playerAsset.transform.position.x, GetPlayerPositionDistanceY(), GetPlayerPositionDistanceZ()), transform.rotation),
@@ -93,10 +89,6 @@ public class LiveDisplay : MonoBehaviour
 
                 case 1:
 
-                    Destroy(liveSprites[0]);
-                    Destroy(liveSprites[0]);
-                    Destroy(liveSprites[1]);
-
                     InstantiateInGameObject
                     (
                         Instantiate(liveSprites[0], new Vector3(playerAsset.transform.position.x, GetPlayerPositionDistanceY(), GetPlayerPositionDistanceZ()), transform.rotation),
@@ -107,10 +99,6 @@ public class LiveDisplay : MonoBehaviour
                     break;
 
                 case 0:
-
-                    Destroy(liveSprites[0]);
-                    Destroy(liveSprites[1]);
-                    Destroy(liveSprites[1]);
 
                     InstantiateInGameObject
                     (
@@ -137,7 +125,7 @@ public class LiveDisplay : MonoBehaviour
 
     private float GetPlayerPositionDistanceZ()
     {
-        return (playerAsset.transform.position.z - 0.9f);
+        return (playerAsset.transform.position.z - 1.1f);
     }
 
     private Vector3 GetHeartScaleValues()
