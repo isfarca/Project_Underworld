@@ -1,8 +1,7 @@
-# Underworld 3D HD Remastered
+# Underworld HD Remastered
 A horror sidescroller playable on PC.
 
- In Underworld HD Remastered you play a TicTac.
- Jump and try to escape!
+In Underworld HD Remastered you play a TicTac. Jump and try to escape!
 
 * Press 'A' or arrow key left to move left.
 * Press 'D' or arrow key right to move right.
