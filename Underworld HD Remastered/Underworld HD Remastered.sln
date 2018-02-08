@@ -1,11 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{2495F855-CF6F-AE6A-BE60-321A1EB4159E}") = "Underworld HD Remastered", "Assembly-UnityScript-firstpass.unityproj", "{71F77614-4732-9695-1F33-F9116AE9F9B2}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Underworld HD Remastered.Plugins", "Underworld HD Remastered.Plugins.csproj", "{C49F80C3-1705-1A99-3AA9-DF32CD843FD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Underworld HD Remastered", "Assembly-CSharp-firstpass.csproj", "{9CDEC46E-9F2E-144C-5D1A-0BCA2BECFC6C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Underworld HD Remastered", "Assembly-CSharp.csproj", "{340D3BA5-C82E-18FF-CCD8-25B27557761F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Underworld HD Remastered", "Underworld HD Remastered.csproj", "{068BDEDC-BBED-6636-DF20-AE8840099E27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,23 +11,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{71F77614-4732-9695-1F33-F9116AE9F9B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71F77614-4732-9695-1F33-F9116AE9F9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71F77614-4732-9695-1F33-F9116AE9F9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71F77614-4732-9695-1F33-F9116AE9F9B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CDEC46E-9F2E-144C-5D1A-0BCA2BECFC6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CDEC46E-9F2E-144C-5D1A-0BCA2BECFC6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CDEC46E-9F2E-144C-5D1A-0BCA2BECFC6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CDEC46E-9F2E-144C-5D1A-0BCA2BECFC6C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{340D3BA5-C82E-18FF-CCD8-25B27557761F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{340D3BA5-C82E-18FF-CCD8-25B27557761F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{340D3BA5-C82E-18FF-CCD8-25B27557761F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{340D3BA5-C82E-18FF-CCD8-25B27557761F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C49F80C3-1705-1A99-3AA9-DF32CD843FD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C49F80C3-1705-1A99-3AA9-DF32CD843FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C49F80C3-1705-1A99-3AA9-DF32CD843FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C49F80C3-1705-1A99-3AA9-DF32CD843FD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{068BDEDC-BBED-6636-DF20-AE8840099E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{068BDEDC-BBED-6636-DF20-AE8840099E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{068BDEDC-BBED-6636-DF20-AE8840099E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{068BDEDC-BBED-6636-DF20-AE8840099E27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

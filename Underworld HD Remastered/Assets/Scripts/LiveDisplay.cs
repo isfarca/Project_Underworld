@@ -55,6 +55,12 @@ public class LiveDisplay : MonoBehaviour
 
     #region Other auxiliary functions
 
+    /// <summary>
+    /// Instantiate hearts in empty game object of the hierarchy.
+    /// </summary>
+    /// <param name="firstHeart"></param>
+    /// <param name="secondHeart"></param>
+    /// <param name="thirdHeart"></param>
     private void InstantiateInGameObject(GameObject firstHeart, GameObject secondHeart, GameObject thirdHeart)
     {
         // Declare variables
@@ -70,6 +76,9 @@ public class LiveDisplay : MonoBehaviour
         thirdHeart.transform.localScale = GetHeartScaleValues();
     }
 
+    /// <summary>
+    /// Instantiate hearts and transfer to the function.
+    /// </summary>
     public void SetHearts()
     {
         if (playerScript != null)
@@ -118,16 +127,28 @@ public class LiveDisplay : MonoBehaviour
 
     #region Return values
 
+    /// <summary>
+    /// Instantiate heart vertical value.
+    /// </summary>
+    /// <returns>Position Y</returns>
     private float GetPlayerPositionDistanceY()
     {
         return (playerAsset.transform.position.y + 0.55f);
     }
 
+    /// <summary>
+    /// Instantiate heart horizontal value.
+    /// </summary>
+    /// <returns>Position Z</returns>
     private float GetPlayerPositionDistanceZ()
     {
         return (playerAsset.transform.position.z - 1.1f);
     }
 
+    /// <summary>
+    /// Instantiate heart scale values.
+    /// </summary>
+    /// <returns>Scale X Y Z</returns>
     private Vector3 GetHeartScaleValues()
     {
         return (new Vector3(0.3f, 0.3f, 0.3f));

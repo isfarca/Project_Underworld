@@ -42,6 +42,7 @@ public class Ladder : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // Gravity off
         characterMotorCScript.movement.maxFallSpeed = 0f;
 
         canClimb = true;
@@ -49,6 +50,7 @@ public class Ladder : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        // Gravity on
         characterMotorCScript.movement.maxFallSpeed = 20f;
 
         canClimb = false;

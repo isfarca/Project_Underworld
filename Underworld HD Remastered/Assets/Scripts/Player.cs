@@ -80,6 +80,9 @@ public class Player : MonoBehaviour
 
     #region Return values
 
+    /// <summary>
+    /// Return/Set live value.
+    /// </summary>
     public int Live
     {
         get { return lives; }
